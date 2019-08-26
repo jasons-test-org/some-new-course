@@ -1,0 +1,17 @@
+title: Some new course
+tagline: A brand new course on Learning Lab
+description: hello!
+template:
+  repo: some-new-course-template
+  name: some-new-course
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
